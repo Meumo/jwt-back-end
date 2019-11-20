@@ -1,0 +1,10 @@
+package mo.izi.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import mo.izi.entities.AppUser;
+
+public interface UserRepository extends JpaRepository<AppUser, Long>{
+
+	public AppUser findByUsername(String username);
+}
